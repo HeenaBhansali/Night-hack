@@ -1,0 +1,38 @@
+.container {
+  text-align: center;
+}
+
+.container p {
+  color: #808080;
+}
+
+.carousel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carouselImage {
+  width: 50%;
+  padding: 10px;
+}
+
+ .imageContainer {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slide-arrow {
+  color: #14b6d4;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.slide-arrow.right {
+  right: 1rem;
+}
+
+.slide-arrow.left {
+  left: 1rem;
+}
