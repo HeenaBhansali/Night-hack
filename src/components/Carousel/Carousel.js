@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Carousel.css";
+import "./carousel.css";
 
 const imgUrls = [
   {
@@ -40,7 +40,7 @@ const Carousel = () => {
 
     setCurrentImageIndex(index);
   };
-  
+
   return (
     <div className="container">
       <h1>Explore our demos</h1>
