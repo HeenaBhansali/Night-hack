@@ -1,9 +1,29 @@
-.aboutMe {
-  text-align: center;
-}
+  .aboutMe {
+    text-align: center;
+    border-top: 2px solid #c372e5;
+  }
 
-.aboutMe section {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
+  .aboutMe > section> * {
+    padding: 20px;
+  }
+
+  .aboutMe > section > img {
+    width: 500px;
+    height: 600px;
+  }
+
+  .aboutMe section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+  }
+
+  .description {
+    text-align: justify;
+    color: grey;
+    font-weight: 600;
+    font-style: oblique;
+    font-size: 20px;
+  }

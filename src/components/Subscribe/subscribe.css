@@ -1,0 +1,56 @@
+.subscribe {
+  background-color: #c372e5;
+  color: white;
+  display: flex;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.subscribe > div {
+  width: 40%;
+  margin: auto;
+}
+
+.email {
+  justify-content: space-evenly;
+  width: 40%;
+  margin: auto;
+  display: flex;
+}
+
+@media only screen and (max-width: 670px) {
+  .email {
+   display: grid;
+  }
+  .email > * {
+      margin: 10px;
+  }
+}
+
+.email > input {
+  border: none;
+  background-color: #c372e5;
+  color: white;
+  border-bottom: 1px solid white;
+  outline: none;
+
+  padding-bottom: 10px;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.email > button {
+  background-color: white;
+  padding: 15px;
+  font-size: 15px;
+  font-weight: 900;
+  color: #c372e5;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}

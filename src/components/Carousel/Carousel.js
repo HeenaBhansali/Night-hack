@@ -54,7 +54,7 @@ const Carousel = () => {
           <Arrow
             direction="left"
             clickFunction={previousSlide}
-            glyph="&#9664;"
+            glyph="&lt;"
           />
         ) : (
           <div></div>
@@ -72,7 +72,7 @@ const Carousel = () => {
           />
         </div>
         {currentImageIndex < imgUrls.length - 1 ? (
-          <Arrow direction="right" clickFunction={nextSlide} glyph="&#9654;" />
+          <Arrow direction="right" clickFunction={nextSlide} glyph="&gt;" />
         ) : (
           <div></div>
         )}

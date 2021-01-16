@@ -1,6 +1,11 @@
 import "./app.css";
 import Header from "./components/Header/Header";
 import Carousel from './components/Carousel/Carousel'
+import Button from "./components/Button/Button";
+import StartFreeTrial from "./components/StartFreeTrial/StartFreeTrial";
+import Client from "./components/Client/Client";
+import Subscribe from "./components/Subscribe/Subscribe";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -20,9 +25,13 @@ function App() {
         </p>
         <br />
         <br />
-        <button className="exploreBtn">Explore Demos -&gt; </button>
+        <Button text={'Explore Demos &gt;'}/>
       </section>
       <Carousel />
+      <StartFreeTrial />
+      <Client />
+      <Subscribe />
+      <Footer />
     </div>
   );
 }

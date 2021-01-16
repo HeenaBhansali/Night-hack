@@ -8,7 +8,7 @@ import AboutMe from "./components/AboutMe/AboutMe";
 ReactDOM.render(
   <Router>
     <Switch>
-      <div className="fill-window">
+      <div>
         <Route exact path="/" component={App} />
         <Route exact path="/about-us" component={AboutMe} />
         <Route path="/home" component={App} />

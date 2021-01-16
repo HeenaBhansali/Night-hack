@@ -1,15 +1,12 @@
-.fill-window {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  overflow-x: hidden;
+html {
+overflow: scroll;
+overflow-x: hidden;
 }
 
-.fill-window ::-webkit-scrollbar {
-  display: none;
+::-webkit-scrollbar {
+width: 0px; 
+background: transparent; 
 }
 
-.exafill-window mple {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
+
+

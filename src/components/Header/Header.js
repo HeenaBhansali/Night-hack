@@ -1,16 +1,8 @@
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  Button,
-  IconButton,
-  Drawer,
-  Link,
-  MenuItem,
-} from "@material-ui/core";
+import { Button, IconButton, Drawer, Link, MenuItem } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import React, { useState, useEffect } from "react";
 import { Link as RouterLink } from "react-router-dom";
+import Logo from "../Logo/Logo";
 import "./header.css";
 
 const headersData = [
@@ -59,7 +51,7 @@ export default function Header() {
   const displayDesktop = () => {
     return (
       <div className="toolBar">
-        {logo}
+        <Logo />
         <div>{getMenuButtons()}</div>
       </div>
     );
@@ -73,7 +65,7 @@ export default function Header() {
 
     return (
       <div className="mobileView">
-        <div>{logo}</div>
+        <Logo />
 
         <IconButton
           {...{
@@ -118,24 +110,19 @@ export default function Header() {
     });
   };
 
-  const logo = (
-    <div className="logoContainer">
-      <img src="/images/Untitled-–-Figma.png" alt="logo" />
-      <Typography variant="h6" component="h1" className="logo">
-        Soprano
-      </Typography>
-    </div>
-  );
-
   const getMenuButtons = () => {
     return headersData.map(({ label, href }) => {
       return (
         <Button
           key={label}
-          color={"inherit"}
+          style={{
+            color: href === window.location.pathname ? "#C372E5" : "#888888",
+            borderBottom:
+              href === window.location.pathname ? "1px solid #C372E5" : "none",
+          }}
           to={href}
           component={RouterLink}
-          className={".menuButton"}
+          className={"menuButton"}
         >
           {label}
         </Button>
@@ -144,11 +131,8 @@ export default function Header() {
   };
 
   return (
-    <header>
-      <div className="header">
-        {/* {displayDesktop()} */}
-        {mobileView ? displayMobile() : displayDesktop()}
-      </div>
-    </header>
+    <div className="header">
+      {mobileView ? displayMobile() : displayDesktop()}
+    </div>
   );
 }
