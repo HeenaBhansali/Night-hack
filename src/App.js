@@ -25,7 +25,7 @@ function App() {
         </p>
         <br />
         <br />
-        <Button text={'Explore Demos &gt;'}/>
+        <Button text={'Explore Demos'}/>
       </section>
       <Carousel />
       <StartFreeTrial />

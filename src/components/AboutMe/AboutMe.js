@@ -13,7 +13,7 @@ const AboutMe = () => {
             <h1>Hello!</h1>
             <h3>I'm Heena.</h3>
             <p className="description">
-              I'm Frontend Developer currently working in I graduated with a
+              I'm Frontend Developer. I graduated with a
               bachelor's degree in Computer Science and Engineering from Eshan
               College of Engineering, Mathura, Uttar Pradesh in 2017. I worked
               as a Student Developer in Geekskool, Bangalore for 10 months from
