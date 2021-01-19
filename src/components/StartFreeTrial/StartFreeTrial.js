@@ -11,25 +11,25 @@ const StartFreeTrial = () => {
         start, run, and grow your business.
       </p>
       <div className="steps">
-        <div>
-          <img src="images/business.png" alt="" />
-          <h2>Move Your Business Online</h2>
+        <div className="step">
+          <img className="stepsImg" src="images/business.png" alt="" />
+          <h4>Move Your Business Online</h4>
           <p>
             Create a business whether you've got a fresh idea or are looking for
             a new way to make money.
           </p>
         </div>
-        <div>
-          <img src="images/switch.png" alt="" />
-          <h2>Switch to Soprano</h2>
+        <div className="step">
+          <img className="stepsImg" src="images/switch.png" alt="" />
+          <h4>Switch to Soprano</h4>
           <p>
             Bring your business to Soprano, no matter which ecommerce platform
             you're currently using.
           </p>
         </div>
-        <div>
-          <img src="images/benefits.png" alt="" />
-          <h2>Enjoy ur benefits</h2>
+        <div className="step">
+          <img className="stepsImg" src="images/benefits.png" alt="" />
+          <h4>Enjoy ur benefits</h4>
           <p>
             Get set up with the help of a trusted freelencer or agency from the
             Shopify Experts Marketplace.

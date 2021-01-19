@@ -1,19 +1,14 @@
 import React, { useState } from "react";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 import "./carousel.css";
 
 const imgUrls = [
-  {
-    0: "/images/Untitled-–-Figma (2).png",
-    1: "/images/Untitled-–-Figma (3).png",
-  },
-  {
-    0: "/images/download (2).jpeg",
-    1: "/images/download (3).jpeg",
-  },
-  {
-    0: "/images/download (4).jpeg",
-    1: "/images/download (5).jpeg",
-  },
+  "/images/Untitled-–-Figma (2).png",
+  "/images/Untitled-–-Figma (3).png",
+  "/images/download (2).jpeg",
+  "/images/download (3).jpeg",
+  "/images/download (4).jpeg",
+  "/images/download (5).jpeg",
 ];
 
 const Arrow = ({ direction, clickFunction, glyph }) => (
@@ -23,12 +18,17 @@ const Arrow = ({ direction, clickFunction, glyph }) => (
 );
 
 const Carousel = () => {
+  const matches = useMediaQuery("(max-width:1000px)");
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const previousSlide = () => {
     const lastIndex = imgUrls.length - 1;
     const shouldResetIndex = currentImageIndex === 0;
-    const index = shouldResetIndex ? lastIndex : currentImageIndex - 1;
+    const index = shouldResetIndex
+      ? lastIndex
+      : matches
+      ? currentImageIndex - 1
+      : currentImageIndex - 2;
 
     setCurrentImageIndex(index);
   };
@@ -36,7 +36,11 @@ const Carousel = () => {
   const nextSlide = () => {
     const lastIndex = imgUrls.length - 1;
     const shouldResetIndex = currentImageIndex === lastIndex;
-    const index = shouldResetIndex ? 0 : currentImageIndex + 1;
+    const index = shouldResetIndex
+      ? 0
+      : matches
+      ? currentImageIndex + 1
+      : currentImageIndex + 2;
 
     setCurrentImageIndex(index);
   };
@@ -50,31 +54,36 @@ const Carousel = () => {
         are coming soon.
       </p>
       <div className="carousel">
-        {currentImageIndex > 0 ? (
-          <Arrow
-            direction="left"
-            clickFunction={previousSlide}
-            glyph="&lt;"
-          />
-        ) : (
-          <div></div>
+        {" "}
+        {currentImageIndex > 0 && (
+          <Arrow direction="left" clickFunction={previousSlide} glyph="&lt;" />
         )}
         <div className="imageContainer">
-          <img
-            src={imgUrls[currentImageIndex][0]}
-            alt=""
-            className="carouselImage"
-          />
-          <img
-            src={imgUrls[currentImageIndex][1]}
-            alt=""
-            className="carouselImage"
-          />
+          {!matches ? (
+            <>
+              <img
+                src={imgUrls[currentImageIndex]}
+                alt=""
+                className="carouselImage"
+              />
+              <img
+                src={imgUrls[currentImageIndex + 1]}
+                alt=""
+                className="carouselImage"
+              />
+            </>
+          ) : (
+            <>
+              <img
+                src={imgUrls[currentImageIndex]}
+                alt=""
+                className="carouselImage"
+              />
+            </>
+          )}
         </div>
-        {currentImageIndex < imgUrls.length - 1 ? (
+        {currentImageIndex < imgUrls.length - 2 && (
           <Arrow direction="right" clickFunction={nextSlide} glyph="&gt;" />
-        ) : (
-          <div></div>
         )}
       </div>
     </div>
