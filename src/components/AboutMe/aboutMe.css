@@ -16,7 +16,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 80%;
+    width: 90%;
     margin: auto;
   }
 
@@ -27,3 +27,32 @@
     font-style: oblique;
     font-size: 20px;
   }
+
+  @media screen and (max-width: 1000px) {
+    .aboutMe section {
+    width: 100%;
+  }
+}
+
+ @media screen and (max-width: 900px) {
+    .aboutMe > section > img {
+    width: 400px;
+    height: 500px;
+  }
+}
+
+ @media screen and (max-width: 800px) {
+    .aboutMe > section > img {
+   width: 300px;
+    height: auto;
+  }
+}
+
+ @media screen and (max-width: 800px) {
+    .aboutMe section {
+  flex-direction: column;
+  }
+}
+
+
+
