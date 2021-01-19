@@ -25,3 +25,12 @@
   padding: 15px;
   font-size: 3rem !important;
 }
+
+@media only screen and (max-width: 500px) {
+  .socialMedia > * {
+    padding: 5px;
+  }
+  .footer > h3 {
+    font-size: small;
+  }
+}

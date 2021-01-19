@@ -1,5 +1,7 @@
 .App {
   width: 100vw !important;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 .content {
@@ -21,13 +23,6 @@
 .mainImg img {
   width: inherit;
 }
-
-/* @media only screen and (max-width: 900px) {
-  img {
-    width: inherit;
-  }
-} */
-
 
 .exploreBtn {
   background-color: #c372e5;

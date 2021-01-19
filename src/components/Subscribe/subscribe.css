@@ -20,10 +20,10 @@
 
 @media only screen and (max-width: 670px) {
   .email {
-   display: grid;
+    display: grid;
   }
   .email > * {
-      margin: 10px;
+    margin: 10px;
   }
 }
 
@@ -53,4 +53,10 @@
   border: none;
   border-radius: 30px;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 450px) {
+  .email > input {
+    width: 150px;
+  }
 }
